@@ -1,0 +1,81 @@
+%{
+load('dm.mat');
+load('ds.mat');
+figure(1);
+plot(dm);
+xlabel('Time/(s)');
+ylabel('Forward Delay/(s)');
+title('');
+hold on;
+figure(2);
+plot(ds);
+xlabel('Time/(s)');
+ylabel('Backward Delay/(s)');
+title('');
+hold on;
+%}
+%{
+load('Qm_p.mat');
+load('Qs_p.mat');
+load('Fh_p.mat');
+load('Fe_p.mat');
+load('Fm_p.mat');
+load('Fs_p.mat');
+figure(1);
+plot(Qm_p,'linewidth',2);
+hold on;
+plot(Qs_p,'linewidth',2);
+xlabel('Time/(s)');
+ylabel('Position/(rad)');
+legend({'qm','qs'},'Location','southeast','FontSize',15);
+hold on;
+figure(2);
+plot(Fh_p,'linewidth',2);
+hold on;
+plot(Fs_p,'linewidth',2);
+xlabel('Time/(s)');
+ylabel('Torque/(Nm)');
+legend({'Th','Ts'},'Location','southeast','FontSize',15);
+hold on;
+figure(3);
+plot(Fe_p,'linewidth',2);
+hold on;
+plot(Fm_p,'linewidth',2);
+xlabel('Time/(s)');
+ylabel('Torque/(Nm)');
+legend({'Te','Tm'},'Location','southeast','FontSize',15);
+hold on;
+%}
+%{
+load('Qm_p4.mat');
+load('Qs_p4.mat');
+load('Fh_p4.mat');
+load('Fe_p4.mat');
+load('Fm_p4.mat');
+load('Fs_p4.mat');
+figure(1);
+plot(Qm_p4,'linewidth',2);
+hold on;
+plot(Qs_p4,'linewidth',2);
+xlabel('Time/(s)');
+ylabel('Position/(rad)');
+legend({'qm','qs'},'Location','southeast','FontSize',15);
+hold on;
+figure(2);
+plot(Fh_p4,'linewidth',2);
+hold on;
+plot(Fs_p4,'linewidth',2);
+ylim([-1.5,4])
+xlabel('Time/(s)');
+ylabel('Torque/(Nm)');
+legend({'Th','Ts'},'Location','southeast','FontSize',15);
+hold on;
+figure(3);
+plot(Fe_p4,'linewidth',2);
+hold on;
+plot(Fm_p4,'linewidth',2);
+xlabel('Time/(s)');
+ylabel('Torque/(Nm)');
+legend({'Te','Tm'},'Location','southeast','FontSize',15);
+hold on;
+%}

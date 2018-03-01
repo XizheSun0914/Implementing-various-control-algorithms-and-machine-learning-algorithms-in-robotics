@@ -1,0 +1,1 @@
+Note that we should set the inputport(2) of the haptic device direct feedthrough false, otherwise matlab will be unable to solve the algebric loop. more information about this, see my blog.
